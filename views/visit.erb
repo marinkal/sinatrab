@@ -1,13 +1,12 @@
-
 <h2>Записаться</h2>
 <form action='/visit' method="POST">
   <div class="form-group">
     <label>Парикмахер:</label>
     <select class="form-control" id="barber" name="barber">
-    		<option selected >Jessie Pikman</option>
-    		<option  >Maria Kolt</option>
-    		<option >Ivan Razin</option>
-    		<option >Irina Bespalova</option>
+    		<option  <%= @barber=='Jessie Pikman'? 'selected':""  %> >Jessie Pikman</option>
+    		<option <%= @barber=='Maria Kolt'? 'selected':""  %>  >Maria Kolt</option>
+    		<option <%= @barber=='Ivan Razin'? 'selected':""  %> >Ivan Razin</option>
+    		<option <%= @barber=='Irina Bespalova'? 'selected':""  %> >Irina Bespalova</option>
     </select>
   </div>
   <div class="form-group">
@@ -15,17 +14,17 @@
     <input type="text" value="<%=@username %>" class="form-control" id="username" name="username" placeholder="Введите ваше имя">
   </div>
     <div class="form-group">
-    <label>Ваше телефон</label>
+    <label>Ваш телефон</label>
     <input type="text" value="<%=@phone%>" class="form-control" id="phone" name="phone" placeholder="Введите ваш телефон">
   </div>
   <div>
     <div class="form-group">
-    <label>Ваше дату</label>
+    <label>Ваша дата</label>
     <input type="date" value="<%=@date%>" class="form-control" id="date" name="date" placeholder="Введите дату">
   </div>
   <div>
     <div class="form-group">
-    <label>Введите время</label>
+    <label>Выберите время</label>
     <input type="time" value="<%=@time%>" class="form-control" id="time" name="time" placeholder="Введите ваше время">
   </div>
   <select name="color" id="colorpicker">
