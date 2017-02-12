@@ -1,1 +1,18 @@
-<h1>Наш телефон</h1>
+<h1>Ну тут сообщение</h1>
+<form method="POST" action="/contacts">
+ <div class="form-group">
+    <label>Ваше имя</label>
+    <input type="text" value="<%=@username %>" class="form-control" id="username" name="username" placeholder="Введите ваше имя">
+  </div>
+   <div class="form-group">
+    <label>Ваше email</label>
+    <input type="text" value="<%=@email %>" class="form-control" id="email" name="email" placeholder="Введите ваш e-mail">
+  </div>
+   <div class="form-group">
+    <label>Ваш комментарий</label>
+    <textarea class="form-control" id="comment" name="comment" placeholder="Ваш комментарий" rows=10>
+    	<%=@comment %>
+    </textarea>
+  </div>
+<button type="submit" class="btn btn-primary">Отправить</button>
+</form>
